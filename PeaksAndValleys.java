@@ -85,11 +85,11 @@ public class PeaksAndValleys {
             for (int i = 0; i < peaksAndValleys.size(); i += 2) {
                 if (i < peaksAndValleys.size()) {
                     int[] peak = peaksAndValleys.get(i);
-                    System.out.println("Peak: Index = " + peak[0] + ", Value = " + pv.numbers.get(peak[0]));
+                    System.out.print("Peak: Index = " + peak[0] + ", Value = " + pv.numbers.get(peak[0]));
                 }
                 if (i + 1 < peaksAndValleys.size()) {
                     int[] valley = peaksAndValleys.get(i + 1);
-                    System.out.println("Valley: Index = " + valley[0] + ", Value = " + pv.numbers.get(valley[0]));
+                    System.out.print("  Valley: Index = " + valley[0] + ", Value = " + pv.numbers.get(valley[0]));
                     System.out.println();
                 }
             }
