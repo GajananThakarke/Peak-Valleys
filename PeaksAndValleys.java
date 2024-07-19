@@ -19,7 +19,7 @@ public class PeaksAndValleys {
         int n = numbers.size();
 
         if (n < 3) {
-            // If less than 3 numbers, no valid peaks and valleys can exist
+        
             return results;
         }
 
@@ -56,7 +56,7 @@ public class PeaksAndValleys {
 
         try (CSVReader reader = new CSVReader(new FileReader(csvFilePath))) {
             List<String[]> csvData = reader.readAll();
-            for (int i = 1; i < csvData.size(); i++) { // Start from index 1 to skip the header row
+            for (int i = 1; i < csvData.size(); i++) { 
                 String[] row = csvData.get(i);
                 for (String cell : row) {
                     numbers.add(Double.parseDouble(cell.trim()));
@@ -70,13 +70,13 @@ public class PeaksAndValleys {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Example usage with a CSV file
+    
         System.out.print("Enter the path to your CSV file: ");
         String csvFilePath = scanner.nextLine().trim();
 
         System.out.print("Enter the threshold value: ");
         double threshold = scanner.nextDouble();
-        scanner.nextLine(); // Consume newline left after nextDouble()
+        scanner.nextLine(); 
 
         try {
             PeaksAndValleys pv = new PeaksAndValleys(csvFilePath);
